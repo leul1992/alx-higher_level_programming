@@ -14,11 +14,12 @@ class Square:
 
     @property
     def size(self):
+        """setter and getter for size"""
         return self.__size
 
     @size.setter
     def size(self, size=0):
-        if (type(size) != int):
+        if type(size) != int:
             raise TypeError('size must be an integer')
         elif (size < 0):
             raise ValueError("size must be >= 0")
@@ -26,6 +27,7 @@ class Square:
 
     @property
     def position(self):
+        """setter and getter for position"""
         return self.__position
 
     @position.setter
@@ -43,7 +45,7 @@ class Square:
 
     def my_print(self):
         """print in stdout with given size"""
-        if (self.__size == 0):
+        if self.__size == 0:
             print('')
         else:
             for i in range(self.position[1]):
