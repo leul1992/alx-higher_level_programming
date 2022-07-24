@@ -8,8 +8,9 @@ class Square:
     """implementation of square class
     methods of __init__, area, my_print
     """
-    def __init__(self, size=0):
+    def __init__(self, size=0, position=(0, 0)):
         self.__size = size
+        self.__position = position
 
     @property
     def size(self):
@@ -23,14 +24,29 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__size = size
 
+    @property
+    def position(self):
+        return self.__position
+
+    @position.setter
+    def position(self, value):
+        if type(position) != tuple or \
+            len(position) != 2 or \
+            not all(isinstance(el, int) for el in position) or \
+                not all(el >= 0 for el in position):
+            raise TypeError('position must be a tuple of 2 positive integers')
+        self.__position = position
+
     def area(self):
         """calculate area"""
         return self.__size**2
 
     def my_print(self):
-        """print in stdout"""
+        """print in stdout with given size"""
         if (self.__size == 0):
             print('')
         else:
+            for i in range(self.position[1]):
+                print('')
             for i in range(self.__size):
-                print('#' * self.__size)
+                print(' ' * self.__position[0] + '#' * self.__size)
