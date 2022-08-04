@@ -16,6 +16,8 @@ Now use it:
 	>>> add_integer(1, 2.2)
 	3
 
+	>>> add_integer(10)
+	108
 	>>> add_integer("hello", 2)
 	Traceback (innermost last):
 		...
