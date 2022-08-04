@@ -34,3 +34,15 @@ Now use it:
 
 	>>> add_integer(-2 , 32)
 	30
+	>>> add_integer(float('inf'))
+	Traceback (most recent call last):
+		...
+	OverflowError: cannot convert float infinity to integer
+	>>> add_integer(float('-inf'))
+	Traceback (innermost last):
+		...
+	OverflowError: cannot convert float infinity to integer
+	>>> add_integer(float('nan'))
+	Traceback (innermost last):
+		...
+	ValueError: cannot convert float NaN to integer
