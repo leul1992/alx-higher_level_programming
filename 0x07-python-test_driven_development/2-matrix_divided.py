@@ -11,6 +11,9 @@ def matrix_divided(matrix, div):
     i = 0
     fres = []
 
+    if type(matrix) is not list:
+        raise TypeError('matrix must be a matrix \
+(list of lists) of integers/floats')
     if type(div) not in (int, float):
         raise TypeError('div must be a number')
 
@@ -22,7 +25,7 @@ def matrix_divided(matrix, div):
         for col in range(len(row)):
             if i == 0:
                 check = len(row)
-            if type(matrix) is not list or type(row) is not list:
+            if type(row) is not list:
                 raise TypeError('matrix must be a matrix \
 (list of lists) of integers/floats')
             if len(row) != check:
