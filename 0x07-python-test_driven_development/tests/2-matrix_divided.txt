@@ -39,3 +39,7 @@ Now use it:
         Traceback (innermost last):
                 ...
 	TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+    	>>> matrix_divided([[2, 3], [5, 8]], float('inf'))
+	[[0.0, 0.0], [0.0, 0.0]]
+	>>> matrix_divided([[2, 2], [2, float('inf')]], 2)
+        [[1.0, 1.0], [1.0, inf]]
