@@ -1,6 +1,5 @@
 #!/usr/bin/node
-if (parseInt(process.argv[2])) {
-  console.log('My number: ' + parseInt(process.argv[2]));
-} else {
-  console.log('Not a number');
-}
+let num = process.argv;
+num = num.map(val => parseInt(val));
+num.sort((a, b) => a - b);
+console.log(num[num.length - 2] || 0);
