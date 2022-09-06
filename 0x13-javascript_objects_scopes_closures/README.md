@@ -1,6 +1,6 @@
 <h1>JavaScript - Objects, Scopes and Closures</h1>
 
-	<em>Includes topics concerning the following:</em>
+	<emp>Includes topics concerning the following:</emp>
 
 	* Why JavaScript programming is amazing
 	* How to create an object in JavaScript
