@@ -4,6 +4,6 @@ const newDict = {};
 for (const key in dict) {
   const value = dict[key];
   if (value in newDict) newDict[value].push(key);
-  else newDict[value] = [key]
+  else newDict[value] = [key];
 }
 console.log(newDict);
