@@ -11,4 +11,5 @@ if __name__ == '__main__':
                            user=userName, passwd=password, db=dbName)
     c = conn.cursor()
     c.execute("""SELECT * FROM states ORDERBY states.id ASC""")
-    c.fetchall()
+    for res in cu:
+        print(row)
