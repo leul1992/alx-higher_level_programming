@@ -6,7 +6,7 @@ if __name__ == '__main__':
     conn = MySQLdb.connect(host='localhost', port=3306, user=argv[1],
                            passwd=argv[2], db=argv[3])
     c = conn.cursor()
-    c.execute(f'SELECT * FROM states WHERE name \
-              LIKE BINARY "{argv[4]}" ORDER BY id')
+    c.execute('SELECT * FROM states WHERE name \
+              LIKE BINARY "{}" ORDER BY id'.format(argv[4]))
     for res in c:
         print(res)
