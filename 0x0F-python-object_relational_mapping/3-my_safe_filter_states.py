@@ -7,6 +7,6 @@ if __name__ == '__main__':
                            passwd=argv[2], db=argv[3])
     c = conn.cursor()
     c.execute('SELECT * FROM states WHERE name \
-              LIKE BINARY "{}" ORDER BY id'.format(argv[4]))
+              LIKE BINARY "{:s}" ORDER BY id'.format(argv[4]))
     for res in c:
         print(res)
