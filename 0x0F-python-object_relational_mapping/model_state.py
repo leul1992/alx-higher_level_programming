@@ -10,3 +10,6 @@ class State(Base):
     __tablename__ = 'states'
     id = Column(Integer, primary_key=True)
     name = Column(String(128), nullable=False)
+
+    def __repr(self):
+        return "<State(id='%s', name='%s')>" % (self.id, self.name)
