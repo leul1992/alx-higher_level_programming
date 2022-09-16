@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""filter list object with letter a"""
 from sys import argv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
