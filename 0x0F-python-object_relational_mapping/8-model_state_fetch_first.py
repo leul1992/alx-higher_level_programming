@@ -15,5 +15,5 @@ if __name__ == '__main__':
     if (state):
         print(f'{state.id}: {state.name}')
     else:
-        print('/n')
+        print('Nothing')
     session.close()
